@@ -47,3 +47,7 @@
 #like-number:hover{
   cursor: default;
 }
+
+#like-number{
+  background-color: #e1dfdf;
+}
