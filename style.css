@@ -76,13 +76,11 @@
 .post-container {
   display: inline-block;
   position:absolute;
-  top:250px;
+  top:230px;
   bottom: 0;
   left: 0;
   right: 0;
-
   margin: auto;
-
   width: 400px;
 }
 

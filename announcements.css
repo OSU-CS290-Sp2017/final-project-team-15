@@ -1,13 +1,13 @@
 /* This is the css for the announcements!*/
 .announcement-container{
     float: right;
-    margin-top: 10px;
+    margin-top: 50px;
     margin-right: 2.5%;
     margin-bottom: 15px;
     background-color: white;
     /*height: 500px;*/
     width: 350px;
-    border-radius: 2px;
+    border-radius: 10px;
 }
 .announcement-title{
     font-family: 'Raleway', sans-serif;
@@ -15,6 +15,8 @@
     margin: 0 0 5px 0;
     size: 35px;
     padding: 10px 25%;
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
 }
 .announcements{
     margin: 0;
@@ -29,3 +31,9 @@
     font-size: 18px;
     padding-bottom: 5px;
 }
+/* This enables the announcement-container to fade on resize
+.announcement-container {-moz-transition: all .3s ease-out;
+  -o-transition: all .3s ease-out;transition: all .3s ease-out;}
+  @media screen and (max-width: 1100px) {
+  .announcement-container { opacity:0;}
+*/
