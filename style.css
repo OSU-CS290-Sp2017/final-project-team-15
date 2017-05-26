@@ -64,8 +64,8 @@
 }
 
 .post-number{
-  display: inline-block;
   width: 30px;
+  margin: 0;
 }
 
 .post-icon-down{
