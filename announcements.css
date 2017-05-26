@@ -1,11 +1,31 @@
 /* This is the css for the announcements!*/
-.announcements{
+.announcement-container{
     float: right;
+    margin-top: 10px;
+    margin-right: 2.5%;
+    margin-bottom: 15px;
+    background-color: white;
+    /*height: 500px;*/
+    width: 350px;
+    border-radius: 2px;
 }
 .announcement-title{
     font-family: 'Raleway', sans-serif;
-    size: 20px;
+    background-color: #f69e31;
+    margin: 0 0 5px 0;
+    size: 35px;
+    padding: 10px 25%;
 }
-.announce{
+.announcements{
+    margin: 0;
+    padding: 0 15px 10px 30px;
+}
+.mini-announcements{
+    margin: 0;
+    padding: 0 15px 0 30px;
+}
+.announcement{
     font-family: 'Raleway', sans-serif;
+    font-size: 18px;
+    padding-bottom: 5px;
 }
