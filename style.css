@@ -1,0 +1,49 @@
+#like-number {
+  font-size: 20px;
+  color: RGBA(255, 165, 0, .5);
+  border: none;
+  width: 50px;
+  padding: 0px;
+}
+
+#like-number:focus {
+  outline: none;
+}
+
+#like-button {
+  margin-left: -5px;
+  font-size: 20px;
+  background: none;
+  border: none;
+  color: RGBA(52, 52, 52, .4);
+  cursor: pointer;
+}
+
+#like-button:hover {
+  color: RGBA(255, 165, 0, .5);
+}
+
+#like-button:focus {
+  outline: none;
+}
+
+#dislike-button {
+  margin-left: -5px;
+  font-size: 20px;
+  background: none;
+  border: none;
+  color: RGBA(52, 52, 52, .4);
+  cursor: pointer;
+}
+
+#dislike-button:hover {
+  color: RGBA(255, 165, 0, .5);
+}
+
+#dislike-button:focus {
+  outline: none;
+}
+
+#like-number:hover{
+  cursor: default;
+}
