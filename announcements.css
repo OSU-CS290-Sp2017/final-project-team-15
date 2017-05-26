@@ -1,1 +1,11 @@
-/* This is the javascript for the announcements!*/
+/* This is the css for the announcements!*/
+.announcements{
+    float: right;
+}
+.announcement-title{
+    font-family: sans-serif;
+    size: 20px;
+}
+.announce{
+    font-family: sans-serif;
+}
