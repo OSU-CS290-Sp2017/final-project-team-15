@@ -1,3 +1,8 @@
+.post-container{
+    margin-left: 20%;
+    float:left;
+}
+
 #like-number {
   font-size: 20px;
   color: RGBA(255, 165, 0, .5);
