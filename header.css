@@ -14,6 +14,9 @@ a {
   font-size: 30px;
   background-color: #f69e31;
   color: #fff;
+  position: fixed;
+  width: 100%;
+  z-index: 1;
 }
 
 .box {
@@ -21,7 +24,7 @@ a {
   left: 38px;
   right: 24px;
   width: 1450px;
-  height: 150px;
+  height: 200px;
   box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.5);
   cursor: pointer;
   background-image: url('https://upload.wikimedia.org/wikipedia/commons/8/87/Weatherford_Hall_Oregon_State_University_Greg_Keene.jpg');
