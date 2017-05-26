@@ -9,7 +9,6 @@ var article = document.getElementsByClassName('post');
 var allnumber = document.getElementsByClassName('post-number');
 var test = document.getElementsByTagName("input");
 
-
 var btn = document.getElementsByTagName("button");
 for(var i = 0; i < btn.length; i++){
   if(i % 2 == 0){
