@@ -1,6 +1,6 @@
 #like-number {
   font-size: 20px;
-  color: RGBA(255, 165, 0, .5);
+  color: RGBA(255, 165, 0, .6);
   border: none;
   width: 50px;
   padding: 0px;
@@ -15,7 +15,8 @@
   font-size: 20px;
   background: none;
   border: none;
-  color: RGBA(52, 52, 52, .4);
+  color: RGBA(52, 52, 52, .3);
+  //color: #e1dfdf;
   cursor: pointer;
 }
 
@@ -32,7 +33,7 @@
   font-size: 20px;
   background: none;
   border: none;
-  color: RGBA(52, 52, 52, .4);
+  color: RGBA(52, 52, 52, .3);
   cursor: pointer;
 }
 
@@ -57,7 +58,10 @@
   width: 25px;
 }
 
-
+.post-number{
+  display: inline-block;
+  width: 30px;
+}
 
 .post-icon-down{
   display: inline-block;
@@ -65,6 +69,7 @@
 }
 
 .post-container {
+  display: inline-block;
   position:absolute;
   top:250px;
   bottom: 0;
@@ -73,7 +78,6 @@
 
   margin: auto;
 
-  display: inline-block;
   width: 400px;
 }
 
@@ -86,5 +90,5 @@
 
 .post-content {
   margin-left: 40px;
-  margin-bottom: 50px;
+  //margin-bottom: 50px;
 }
