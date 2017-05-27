@@ -21,9 +21,8 @@ a {
 
 .box {
   position: relative;
-  left: 38px;
-  right: 24px;
-  width: 1450px;
+  margin-left: 5%;
+  width: 90%;
   height: 180px;
   box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.5);
   cursor: pointer;
