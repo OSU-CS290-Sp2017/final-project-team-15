@@ -73,6 +73,10 @@
   width: 25px;
 }
 
+.post-text{
+  font-family: 'Raleway', sans-serif;
+}
+
 .post-container {
   display: inline-block;
   position:absolute;
