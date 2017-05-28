@@ -11,16 +11,16 @@ var btn = document.getElementsByTagName("button");
 for(var i = 0; i < btn.length; i++){
   if(i % 2 == 0){
     (function(index){
-      btn[i].onclick = function(){
+      btn[i].addEventListener('click', function(){
           inc(index);
-      }
+      })
     })(i);
   }
   else{
     (function(index){
-      btn[i].onclick = function(){
+      btn[i].addEventListener('click', function(){
           dec(index);
-      }
+      })
     })(i);
   }
 }
