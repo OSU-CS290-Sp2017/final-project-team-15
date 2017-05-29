@@ -1,9 +1,25 @@
 /*This is the CSS for the left side bar for Beaver Post*/
 .links-container{
-    background-color: white;
     float: left;
-    padding: 10px;
     margin-top: 50px;
     margin-left: 2.5%;
+    margin-bottom: 15px;
+    background-color: white;
     width: 20%;
+    border-radius: 10px;
+}
+
+.links-title{
+    font-family: 'Raleway', sans-serif;
+    background-color: #f69e31;
+    margin: 0 0 5px 0;
+    size: 35px;
+    padding: 10px 20px;
+    text-align: center;
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+}
+
+.search{
+    text-align: center;
 }

@@ -75,15 +75,14 @@
 
 .post-container {
   display: inline-block;
+  margin-left: 2.5%;
   margin-top: 50px;
-  margin-left: 1.5%;
   width: 50%;
 }
 
 .post{
   padding-left: 20px;
   background-color: white;
-  /*width: 380px;*/
   border-radius: 10px;
   min-height: 90px;
 }
