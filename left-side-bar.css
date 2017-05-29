@@ -1,1 +1,9 @@
-//This is the CSS for the left side bar for Beaver Post
+/*This is the CSS for the left side bar for Beaver Post*/
+.links-container{
+    background-color: white;
+    float: left;
+    padding: 10px;
+    margin-top: 50px;
+    margin-left: 2.5%;
+    width: 20%;
+}
