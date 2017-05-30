@@ -38,3 +38,27 @@ function dec(index){
 /*for(var i = 0; i < input.length; i++){
   console.log(input[i].value);
 }*/
+
+document.getElementById("search-input").addEventListener("keyup", liveSearch);
+
+function liveSearch(){
+
+  var input = document.getElementById('search-input').value;
+  var post = document.getElementsByClassName('post');
+  var par = document.getElementsByClassName('post-content');
+  var num = document.getElementsByClassName('post-number');
+
+  for (i = 0; i < par.length; i++) {
+    var p = par[i].getElementsByTagName("p")[0];
+    var n = num[i].getElementsByTagName("input")[0];
+    if(p.textContent.toLowerCase().indexOf(input.toLowerCase()) > -1 ||
+      n.value.indexOf(input) > -1){
+      post[i].style.display = "";
+    }
+    else{
+      post[i].style.display = "none";
+      //ar[i].Add();
+      //i = i -1;
+    }
+  }
+}
