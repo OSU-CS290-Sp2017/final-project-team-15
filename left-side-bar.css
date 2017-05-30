@@ -41,7 +41,7 @@ a {
   color: black;
 }
 
-a:hover {
+a span:hover {
   color: #f69e31;
 }
 
