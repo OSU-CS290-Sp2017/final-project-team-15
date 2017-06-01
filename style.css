@@ -54,6 +54,11 @@
   //background-color: #e1dfdf;
 }
 
+#new-post-button {
+  float:right;
+  margin-right: 40px;
+}
+
 .post-icon-up{
   display: inline-block;
   width: 25px;

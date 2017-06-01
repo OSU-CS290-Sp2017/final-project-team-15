@@ -9,7 +9,8 @@ var input = document.getElementsByTagName("input");
 
 var btn = document.getElementsByTagName("button");
 for(var i = 0; i < btn.length; i++){
-  if(i % 2 == 0){
+  if(i === 0) {var g = 0;}
+  if((i - 1) % 2 == 0){
     (function(index){
       btn[i].addEventListener('click', function(){
           inc(index);
@@ -19,7 +20,7 @@ for(var i = 0; i < btn.length; i++){
   else{
     (function(index){
       btn[i].addEventListener('click', function(){
-          dec(index);
+          dec(index - 1);
       })
     })(i);
   }
