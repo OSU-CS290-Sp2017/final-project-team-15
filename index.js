@@ -63,3 +63,13 @@ function liveSearch(){
     }
   }
 }
+
+//Add new-post functionality
+document.getElementById("new-post-button").addEventListener("click", addPost);
+function addPost(event){
+  var text = document.getElementById("new-post-input");
+  if ((text.value.length == 0) || (text.value.length > 200)){
+    alert("Please enter a post between 1 and 200 characters in length.");
+  }
+  //New div creater to be implemented
+}

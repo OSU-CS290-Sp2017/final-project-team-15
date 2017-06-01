@@ -54,9 +54,45 @@
   //background-color: #e1dfdf;
 }
 
+#new-post-input {
+  float:left;
+  background-color: #eeeeee;
+  height:25px;
+  color: black;
+  font-family: "Raleway", sans-serif;
+  font-size: 15px;
+  border: 1px solid lightgrey;
+  border-radius: 5px;
+  width: 250px;
+  transition: 0.4s ease-in-out;
+  background-repeat: no-repeat;
+}
+
+#new-post-input:focus{
+    background-color:white;
+    border-radius: 10px;
+    color: black;
+    outline: none;
+    width: 80%;
+    height: 65px;
+    border: 1px solid rgba(246,158,49,0.4);
+}
+
 #new-post-button {
   float:right;
-  margin-right: 40px;
+  margin-right:20px;
+  font-family: "Raleway", sans-serif;
+  font-size: 15px;
+  height:65px;
+  width:80px;
+  border-radius:10px;
+  border:none;
+  color:#fff;
+  background-color:#ffad46;
+}
+
+.new-post-content {
+  padding-top: 10px;
 }
 
 .post-icon-up{
