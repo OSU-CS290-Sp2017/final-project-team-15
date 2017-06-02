@@ -74,63 +74,65 @@ function addPost(event){
   if ((text.value.length == 0) || (text.value.length > 200)){
     alert("Please enter a post between 1 and 200 characters in length.");
   }
+  else{
+    //Create Container
+    var newPostContainer = document.createElement("article");
+    newPostContainer.classList.add("post");
 
-//Create Container
-  var newPostContainer = document.createElement("article");
-  newPostContainer.classList.add("post");
+    //Create voting div items
+    /*
+    var newPostVotes = document.createElement("div");
+    newPostVotes.classList.add("votes");
 
-//Create voting div items
-/*
-  var newPostVotes = document.createElement("div");
-  newPostVotes.classList.add("votes");
+    var upVoteButton = document.createElement("button");
+    upVoteButton.classList.add("fa fa-chevron-up");
+    upVoteButton.setAttribute("id", "like-button");
 
-  var upVoteButton = document.createElement("button");
-  upVoteButton.classList.add("fa fa-chevron-up");
-  upVoteButton.setAttribute("id", "like-button");
+    var newPostUpVote = document.createElement("button");
+    newPostUpVote.classList.add("post-icon-up");
 
-  var newPostUpVote = document.createElement("button");
-  newPostUpVote.classList.add("post-icon-up");
+    var newPostNumberInput = document.createElement("input");
+    newPostNumberInput.style...
+    newPostNumberInput.value = 20...
+    newPostNumberInput.type = text...
 
-  var newPostNumberInput = document.createElement("input");
-  newPostNumberInput.style...
-  newPostNumberInput.value = 20...
-  newPostNumberInput.type = text...
+    var newPostNumber = document.createElement("div");
+    newPostNumber.classList.add("post-number");
 
-  var newPostNumber = document.createElement("div");
-  newPostNumber.classList.add("post-number");
+    var downVoteButton = document.createElement("button");
+    upVoteButton.classList.add("fa fa-chevron-down");
+    upVoteButton.setAttribute("id", "dislike-button");
 
-  var downVoteButton = document.createElement("button");
-  upVoteButton.classList.add("fa fa-chevron-down");
-  upVoteButton.setAttribute("id", "dislike-button");
+    var newPostDownVote = newPostVotes.createElement("button");
+    newPostDownVote.classList.add("post-icon-down");
+    */
 
-  var newPostDownVote = newPostVotes.createElement("button");
-  newPostDownVote.classList.add("post-icon-down");
-*/
-
-//Create content items
-  var text = document.createTextNode(document.getElementById("new-post-input").value + "");
-  var newPostContent = document.createElement("div");
-  newPostContent.classList.add("post-content");
-  var newPostText = document.createElement("p");
-  newPostText.classList.add("post-text");
+    //Create content items
+    var text = document.createTextNode(document.getElementById("new-post-input").value + "");
+    var newPostContent = document.createElement("div");
+    newPostContent.classList.add("post-content");
+    var newPostText = document.createElement("p");
+    newPostText.classList.add("post-text");
 
 
-//Append Children in ascending order
-/*
-  newPostUpVote.appendChild(upVoteButton);
-  newPostVotes.appendChild(newPostUpVote);
-  newPostNumber.appendChild(newPostNumberInput);
-  newPostVotes.appendChild(newPostNumber);
-  newPostUpVote.appendChild(downVoteButton);
-  newPostVotes.appendChild(newPostDownVote);
-  newPostContainer.appendChild(newPostVotes);
-*/
+    //Append Children in ascending order
+    /*
+    newPostUpVote.appendChild(upVoteButton);
+    newPostVotes.appendChild(newPostUpVote);
+    newPostNumber.appendChild(newPostNumberInput);
+    newPostVotes.appendChild(newPostNumber);
+    newPostUpVote.appendChild(downVoteButton);
+    newPostVotes.appendChild(newPostDownVote);
+    newPostContainer.appendChild(newPostVotes);
+    */
 
-  newPostText.appendChild(text);
-  newPostContent.appendChild(newPostText);
-  newPostContainer.appendChild(newPostContent);
-  lastPost = document.getElementsByClassName("post")[0];
-  document.getElementsByClassName("post-container")[0].insertBefore(newPostContainer, lastPost);
+    newPostText.appendChild(text);
+    newPostContent.appendChild(newPostText);
+    newPostContainer.appendChild(newPostContent);
+    lastPost = document.getElementsByClassName("post")[0];
+    document.getElementsByClassName("post-container")[0].insertBefore(newPostContainer, lastPost);
+    document.getElementById("new-post-input").value = "";
+  }
 }
 
 
