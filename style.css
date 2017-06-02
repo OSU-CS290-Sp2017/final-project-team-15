@@ -54,14 +54,19 @@
   //background-color: #e1dfdf;
 }
 
+.new-post-content{
+  padding-left: 15px;
+}
+
 .new-post {
   display: inline-block;
   margin-left: 320px;
-  margin-top: 50px;
+  margin-top: -70px;
   width: 50%;
   background-color: white;
   border-radius: 10px;
   min-height: 90px;
+  position: absolute;
 }
 
 #new-post-input {
