@@ -55,6 +55,7 @@
 }
 
 #new-post-input {
+  padding-left: 15px;
   float:left;
   background-color: #eeeeee;
   height:25px;
