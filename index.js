@@ -131,3 +131,30 @@ function addPost(event){
   newPostContainer.appendChild(newPostContent);
   document.getElementsByClassName("post-container")[0].appendChild(newPostContainer);
 }
+
+
+//Popular button js
+var number = document.getElementsByClassName('post-number');
+var pp = document.getElementsByClassName('post-content');
+var highest = 0;
+
+function popularfunc(){
+  for(i = 0; i < pp.length; i++){
+  var nn = number[i].getElementsByTagName("input")[0];
+  // console.log(nn.value);
+  if(nn.value > highest){
+    console.log("highest needs to be changed");
+    highest = nn;
+    i++;
+    console.log(highest.value);
+  }
+  else{
+    console.log("dont change highest");
+  }
+
+  console.log(i);
+}
+
+}
+var popular = document.getElementsByClassName("link-popular")[0];
+popular.addEventListener('click',popularfunc);
