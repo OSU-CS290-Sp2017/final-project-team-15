@@ -54,6 +54,16 @@
   //background-color: #e1dfdf;
 }
 
+.new-post {
+  display: inline-block;
+  margin-left: 320px;
+  margin-top: 50px;
+  width: 50%;
+  background-color: white;
+  border-radius: 10px;
+  min-height: 90px;
+}
+
 #new-post-input {
   padding-left: 15px;
   float:left;

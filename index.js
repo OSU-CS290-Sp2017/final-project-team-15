@@ -9,8 +9,7 @@ var input = document.getElementsByTagName("input");
 
 var btn = document.getElementsByTagName("button");
 for(var i = 0; i < btn.length; i++){
-  if(i === 0) {var g = 0;}
-  if((i - 1) % 2 == 0){
+  if(i % 2 == 0){
     (function(index){
       btn[i].addEventListener('click', function(){
           inc(index);
@@ -20,7 +19,7 @@ for(var i = 0; i < btn.length; i++){
   else{
     (function(index){
       btn[i].addEventListener('click', function(){
-          dec(index - 1);
+          dec(index);
       })
     })(i);
   }
@@ -127,9 +126,11 @@ function addPost(event){
   newPostContainer.appendChild(newPostVotes);
 */
 
-  newPostContent.appendChild(text);
+  newPostText.appendChild(text);
+  newPostContent.appendChild(newPostText);
   newPostContainer.appendChild(newPostContent);
-  document.getElementsByClassName("post-container")[0].appendChild(newPostContainer);
+  lastPost = document.getElementsByClassName("post")[0];
+  document.getElementsByClassName("post-container")[0].insertBefore(newPostContainer, lastPost);
 }
 
 
