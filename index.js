@@ -8,17 +8,17 @@ var article = document.getElementsByClassName('post');
 var input = document.getElementsByTagName("input");
 
 var btn = document.getElementsByTagName("button");
-for(var i = 0; i < btn.length; i++){
+for(var i = 0; i < btn.length-1; i++){
   if(i % 2 == 0){
     (function(index){
-      btn[i].addEventListener('click', function(){
+      btn[i+1].addEventListener('click', function(){
           inc(index);
       })
     })(i);
   }
   else{
     (function(index){
-      btn[i].addEventListener('click', function(){
+      btn[i+1].addEventListener('click', function(){
           dec(index);
       })
     })(i);
@@ -27,12 +27,12 @@ for(var i = 0; i < btn.length; i++){
 
 function inc(index){
   index = Math.floor(index/2);
-  input[index].value = Number(input[index].value) + 1;
+  input[index+1].value = Number(input[index+1].value) + 1;
 }
 
 function dec(index){
   index = Math.floor(index/2);
-  input[index].value = Number(input[index].value) - 1;
+  input[index+1].value = Number(input[index+1].value) - 1;
 }
 
 /*for(var i = 0; i < input.length; i++){
