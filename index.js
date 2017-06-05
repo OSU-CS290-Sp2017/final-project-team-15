@@ -48,7 +48,7 @@ function liveSearch(){
   var par = document.getElementsByClassName('post-content');
   var num = document.getElementsByClassName('post-number');
 
-  for (i = 0; i < par.length; i++) {
+  for (i = 0; i < par.length+1; i++) {
     var p = par[i].getElementsByTagName("p")[0];
     var n = num[i].getElementsByTagName("input")[0];
     if(p.textContent.toLowerCase().indexOf(input.toLowerCase()) > -1 ||
@@ -60,6 +60,14 @@ function liveSearch(){
       //ar[i].Add();
       //i = i -1;
     }
+  }
+}
+
+//Allows user to press "ENTER" to add post
+function enter(e){
+  if(e.keyCode === 13){
+    e.preventDefault();
+    addPost();
   }
 }
 
