@@ -150,9 +150,6 @@ var number = document.getElementsByClassName('post-number');
 var pp = document.getElementsByClassName('post-content');
 var highest = 0;
 var removePosts = document.getElementsByClassName('post');
-// var temp = document.getElementById('like-number');
-// console.log(typeof temp.value);
-
 
 function popularfunc(){
 
@@ -160,17 +157,11 @@ function popularfunc(){
   var nn = number[i].getElementsByTagName("input")[0];
 
   var n = Number(nn.value);
-  // console.log(n);
-  // console.log(n);
+
   if(n > highest){
-    // console.log("highest needs to be changed");
+
     highest = n;
     var newobject = removePosts[i];
-    console.log(newobject);
-
-
-    // i++;
-    console.log("highest",highest);
   }
 
 }
@@ -183,7 +174,7 @@ for(i = 0; i < pp.length; i++){
     removePosts[i].style.display = "";
   }
 }
-console.log("MOST popular", newobject);
+popular.removeEventListener('click', popularfunc);
 }
 var popular = document.getElementsByClassName("link-popular")[0];
 popular.addEventListener('click',popularfunc);
