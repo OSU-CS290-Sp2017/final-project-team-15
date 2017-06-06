@@ -8,20 +8,24 @@ var article = document.getElementsByClassName('post');
 var input = document.getElementsByTagName("input");
 
 var btn = document.getElementsByTagName("button");
-for(var i = 0; i < btn.length-1; i++){
-  if(i % 2 == 0){
-    (function(index){
-      btn[i+1].addEventListener('click', function(){
+
+addl();
+function addl(){
+  for(var i = 0; i < btn.length-1; i++){
+    if(i % 2 == 0){
+      (function(index){
+        btn[i+1].addEventListener('click', function(){
           inc(index);
-      })
-    })(i);
-  }
-  else{
-    (function(index){
-      btn[i+1].addEventListener('click', function(){
+        })
+      })(i);
+    }
+    else{
+      (function(index){
+        btn[i+1].addEventListener('click', function(){
           dec(index);
-      })
-    })(i);
+        })
+      })(i);
+    }
   }
 }
 
@@ -35,9 +39,24 @@ function dec(index){
   input[index+1].value = Number(input[index+1].value) - 1;
 }
 
-/*for(var i = 0; i < input.length; i++){
-  console.log(input[i].value);
-}*/
+function addreverse(){
+  for(var i = 0; i < btn.length-1; i++){
+    if(i % 2 == 0){
+      (function(index){
+        btn[i+1].addEventListener('click', function(){
+          dec(index);
+        })
+      })(i);
+    }
+    else{
+      (function(index){
+        btn[i+1].addEventListener('click', function(){
+          inc(index);
+        })
+      })(i);
+    }
+  }
+}
 
 document.getElementById("search-input").addEventListener("keyup", liveSearch);
 
@@ -83,6 +102,7 @@ function addPost(event){
     alert("Please enter a post between 1 and 200 characters in length.");
   }
   else{
+    addreverse(); //DONT delete :) (adds arrow function to new posts)
     //Create Container
     var newPostContainer = document.createElement("article");
     newPostContainer.classList.add("post");
@@ -147,9 +167,9 @@ function addPost(event){
     // console.log(newPostContainer);
     lastPost = document.getElementsByClassName("post")[0];
     document.getElementsByClassName("post-container")[0].insertBefore(newPostContainer, lastPost);
+    addl(); //adds new listener to new posts
     document.getElementById("new-post-input").value = "";
     console.log(newPostContainer);
-
   }
 }
 
