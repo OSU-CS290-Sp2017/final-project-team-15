@@ -122,8 +122,45 @@ function addPost(event){
     newPostContent.classList.add("post-content");
     var newPostText = document.createElement("p");
     newPostText.classList.add("post-text");
+//////////////////////////////////////////////////////////////////////
+    var newPostVotes = document.createElement("div");
+    newPostVotes.classList.add("votes");
+////////////////////////////////////////////////////////////////
+    var upVoteButton = document.createElement("button");
+    upVoteButton.setAttribute("type", "button");
+    upVoteButton.setAttribute("id", "like-button");
+    // upVoteButton.setAttribute("i", "");
+    upVoteButton.classList.add("fa","fa-chevron-up");
 
+    var newPostUpVote = document.createElement("div");
+    newPostUpVote.classList.add("post-icon-up");
+///////////////////////////////////////////////////////////////////////
+    // var newPostNumberInput = document.createElement("input");
 
+///////////////////////////////////////////////////////////////////////////
+    var newPostNumber = document.createElement("div");
+    newPostNumber.classList.add("post-number");
+    var newPostNumberInput = document.createElement("input");
+    newPostNumberInput.setAttribute("type", "text");
+    newPostNumberInput.setAttribute("id", "like-number");
+    newPostNumberInput.setAttribute("value", "0");
+    newPostNumberInput.setAttribute("onfocus", "this.blur()");
+    // newPostNumberInput.setAttribute("readonly");
+////////////////////////////////////////////////////////////////////////////
+
+    var downVoteButton = document.createElement("button");
+    downVoteButton.setAttribute("type", "button");
+    downVoteButton.setAttribute("id", "dislike-button");
+    // upVoteButton.setAttribute("i", "");
+    downVoteButton.classList.add("fa","fa-chevron-down");
+
+    // var newPostUpVote = document.createElement("div");
+    // newPostUpVote.classList.add("post-icon-up");
+
+    var newPostDownVote = document.createElement("div");
+    newPostDownVote.classList.add("post-icon-down");
+
+////////////////////////////////////////////////////////////////////////////
     //Append Children in ascending order
     /*
     newPostUpVote.appendChild(upVoteButton);
@@ -134,13 +171,42 @@ function addPost(event){
     newPostVotes.appendChild(newPostDownVote);
     newPostContainer.appendChild(newPostVotes);
     */
+    // var newVotes = document.createElement("div");
+    // newVotes.classList.add("votes");
+    // var newPostIconUp = document.createElement("div");
+    // newPostIconUp.classList.add("post-icon-up");
+    // var newPostNumber = document.createElement("div")
+
+    newPostVotes.appendChild(newPostUpVote);
+    newPostUpVote.appendChild(upVoteButton);
+
+
+    newPostVotes.appendChild(newPostNumber);
+    newPostNumber.appendChild(newPostNumberInput);
+
+    // newPostNumber.appendChild(newPostUpVote);
+    newPostVotes.appendChild(newPostDownVote);
+    newPostDownVote.appendChild(downVoteButton);
+    newPostContainer.appendChild(newPostVotes);
 
     newPostText.appendChild(text);
     newPostContent.appendChild(newPostText);
     newPostContainer.appendChild(newPostContent);
+    // console.log(newPostContainer);
     lastPost = document.getElementsByClassName("post")[0];
     document.getElementsByClassName("post-container")[0].insertBefore(newPostContainer, lastPost);
     document.getElementById("new-post-input").value = "";
+
+    //Voting for new posts
+
+    //
+    // newPostNumber.appendChild(newPostDownVote);
+    // newPostNumber.appendChild(newPostUpVote);
+    // newPostVotes.appendChild(newPostNumber);
+    // newPostContainer.appendChild(newPostVotes);
+
+    console.log(newPostContainer);
+
   }
 }
 
