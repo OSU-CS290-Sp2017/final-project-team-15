@@ -207,3 +207,54 @@ popular.removeEventListener('click', popularfunc);
 }
 var popular = document.getElementsByClassName("link-popular")[0];
 popular.addEventListener('click',popularfunc);
+
+
+// functions for sending stuff to the server //
+
+//make post button talk to server
+document.getElementById('new-post-button').addEventListener('click', addPost);
+
+function addPost(){
+    //set the values for what we're gonna send
+    var postContent = document.getElementById('new-post-input').value || '';
+    var postVotes = 0;
+
+    //if it exists try to store the post and if it fails tell the user
+    if(postContent){
+        storePost(postContent, postVotes, function(err){
+            if(err){
+                alert("Unable to make post. Please try again.");
+            }else{
+                // insert code here to make new post appear
+            }
+        });
+    }else{
+        alert("You need to enter some text for the post!");
+    }
+}
+
+function storePost(content, votes, callback){
+    //set up a new XMLHttpRequest to send to server
+    var postRequest = new XMLHttpRequest();
+    //set the values needed for the post
+    postRequest.open('POST', '/post');
+    postRequest.setRequestHeader('Content-Type', 'application/json');
+
+    //set up to listen for when server replies
+    postRequest.addEventListener('load', function(event){
+        var error;
+        //if error tell user and don't post
+        if(event.target.status !== 200){
+            error = event.target.response;
+        }
+        callback(error);
+    });
+
+    //this is the object that were sending to the server
+    //it will be in req.body
+    var postBody = {
+        content: content,
+        votes: votes
+    };
+    postRequest.send(JSON.stringify(postBody)); //send the request
+}
