@@ -168,7 +168,6 @@ function addPost(event){
     document.getElementsByClassName("post-container")[0].insertBefore(newPostContainer, lastPost);
     addl(); //adds new listener to new posts
     document.getElementById("new-post-input").value = "";
-    console.log(newPostContainer);
   }
 }
 
