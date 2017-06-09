@@ -32,11 +32,13 @@ function addl(){
 function inc(index){
   index = Math.floor(index/2);
   input[index+1].value = Number(input[index+1].value) + 1;
+  sendVote(index+1, true);
 }
 
 function dec(index){
   index = Math.floor(index/2);
   input[index+1].value = Number(input[index+1].value) - 1;
+  sendVote(index+1, false);
 }
 
 function addreverse(){
@@ -255,4 +257,36 @@ function storePost(content, votes, callback){
         votes: votes
     };
     postRequest.send(JSON.stringify(postBody)); //send the request
+}
+
+function sendVote(i, bool){
+    //set the values for what we're gonna send
+    storeVote(i, bool, function(err){
+    });
+}
+
+function storeVote(i, bool, callback){
+    //set up a new XMLHttpRequest to send to server
+    var postRequest = new XMLHttpRequest();
+    //set the values needed for the post
+    postRequest.open('POST', '/vote');
+    postRequest.setRequestHeader('Content-Type', 'application/json');
+
+    //set up to listen for when server replies
+    postRequest.addEventListener('load', function(event){
+        var error;
+        //if error tell user and don't post
+        if(event.target.status !== 200){
+            error = event.target.response;
+        }
+        callback(error);
+    });
+
+    //this is the object that were sending to the server
+    //it will be in req.body
+    var voteBody = {
+        index: i,
+        bool: bool
+    };
+    postRequest.send(JSON.stringify(voteBody)); //send the request
 }
