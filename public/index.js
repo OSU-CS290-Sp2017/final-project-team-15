@@ -216,7 +216,6 @@ function sendPost(){
     //set the values for what we're gonna send
     var postContent = document.getElementById('new-post-input').value || '';
     var postVotes = 0;
-    console.log("post contnent: ", postContent);
     //if it exists try to store the post and if it fails tell the user
     if(postContent){
         storePost(postContent, postVotes, function(err){
@@ -255,6 +254,5 @@ function storePost(content, votes, callback){
         content: content,
         votes: votes
     };
-    console.log("post body: ", postBody);
     postRequest.send(JSON.stringify(postBody)); //send the request
 }
