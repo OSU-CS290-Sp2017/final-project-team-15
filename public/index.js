@@ -91,7 +91,6 @@ function enter(e){
 }
 
 //Add event listener for new post
-document.getElementById("new-post-button").addEventListener("click", addPost);
 
 //Add new post to DOM
 function addPost(event){
@@ -212,9 +211,9 @@ popular.addEventListener('click',popularfunc);
 // functions for sending stuff to the server //
 
 //make post button talk to server
-document.getElementById('new-post-button').addEventListener('click', addPost);
+document.getElementById('new-post-button').addEventListener('click', sendPost);
 
-function addPost(){
+function sendPost(){
     //set the values for what we're gonna send
     var postContent = document.getElementById('new-post-input').value || '';
     var postVotes = 0;
@@ -226,6 +225,7 @@ function addPost(){
                 alert("Unable to make post. Please try again.");
             }else{
                 // insert code here to make new post appear
+                addPost();
             }
         });
     }else{
