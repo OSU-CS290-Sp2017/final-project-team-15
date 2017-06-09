@@ -47,6 +47,34 @@ app.post('/post', function(req, res, next){
     }
 });
 
+//if we see the user is trying to post stuff
+app.post('/votes', function(req, res, next){
+    //log what the user is adding
+    console.log("-------- got a vote change request with", req.body.bool, req.body.index);
+    if(req.body){
+        //make an object to receive stuff from client
+        var index = req.body.i;
+
+        var vote = pasrseInt(postData[index].votes);
+        if(req.body.bool){
+            vote++;
+        }else{
+            vote--;
+        }
+        postData[index].votes = toString(vote);
+        //send information back to client
+        fs.writeFile('postData.json', JSON.stringify(postData), function(err){
+            if(err){
+                res.status(500).send("Unable to accomplish vote.");
+            }else{
+                res.status(200).send();
+            }
+        });
+    }else{
+        res.status(400).send("Must have clicked valid button.");
+    }
+});
+
 //for all pages not specified, give them the 404 page
 app.get('*', function(req, res){
     res.status(404);
