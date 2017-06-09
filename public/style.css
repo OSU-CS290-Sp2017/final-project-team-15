@@ -176,3 +176,46 @@
     display: block;
     float:left;
 }
+
+footer{
+  margin-top: 270px;
+}
+
+.footer-container{
+    background-color: #ffad46;
+    color: white;
+    clear: both;
+    position: relative;
+    z-index: 10;
+    height: 170px;
+    padding-top: 10px;
+}
+
+.htitle{
+  text-align: center;
+}
+
+.fc a{
+  color: white;
+  padding-right: 40px;
+}
+
+.fc a:hover{
+  text-decoration: underline;
+}
+
+.ff{
+  text-align: center;
+  list-style-type: none;
+}
+
+.line{
+  padding-left: 40px;
+  border-top: 1px solid #ccc;
+  background-color: white;
+  border: 0 none;
+  color: white;
+  height: 2px;
+  border-radius: 30px;
+  margin-top: -1em;
+}

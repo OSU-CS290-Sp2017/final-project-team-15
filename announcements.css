@@ -1,0 +1,39 @@
+/* This is the css for the announcements!*/
+.announcement-container{
+    float: right;
+    margin-top: 50px;
+    margin-right: 2.5%;
+    margin-bottom: 15px;
+    background-color: white;
+    width: 20%;
+    border-radius: 10px;
+}
+.announcement-title{
+    font-family: 'Raleway', sans-serif;
+    color: white;
+    background-color: #ffad46;
+    margin: 0 0 5px 0;
+    size: 35px;
+    padding: 10px 20px;
+    text-align: center;
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+}
+.announcements{
+    margin: 0;
+    padding: 0 15px 10px 30px;
+}
+.mini-announcements{
+    margin: 0;
+    padding: 0 15px 0 30px;
+}
+.announcement{
+    font-family: 'Raleway', sans-serif;
+    font-size: 18px;
+    padding-bottom: 5px;
+}
+ /*This enables the announcement-container to fade on resize
+.announcement-container {-moz-transition: all .3s ease-out;
+  -o-transition: all .3s ease-out;transition: all .3s ease-out;}
+  @media screen and (max-width: 1100px) {
+  .announcement-container { opacity:0;}*/
