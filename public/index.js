@@ -32,13 +32,13 @@ function addl(){
 function inc(index){
   index = Math.floor(index/2);
   input[index+1].value = Number(input[index+1].value) + 1;
-  sendVote(index+1, true);
+  sendVote(index, true);
 }
 
 function dec(index){
   index = Math.floor(index/2);
   input[index+1].value = Number(input[index+1].value) - 1;
-  sendVote(index+1, false);
+  sendVote(index, false);
 }
 
 function addreverse(){

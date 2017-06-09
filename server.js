@@ -48,20 +48,20 @@ app.post('/post', function(req, res, next){
 });
 
 //if we see the user is trying to post stuff
-app.post('/votes', function(req, res, next){
+app.post('/vote', function(req, res, next){
     //log what the user is adding
     console.log("-------- got a vote change request with", req.body.bool, req.body.index);
     if(req.body){
         //make an object to receive stuff from client
-        var index = req.body.i;
+        var index = req.body.index;
 
-        var vote = pasrseInt(postData[index].votes);
+        var vote = Number.parseInt(postData[index].votes);
         if(req.body.bool){
             vote++;
         }else{
             vote--;
         }
-        postData[index].votes = toString(vote);
+        postData[index].votes = JSON.stringify(vote);
         //send information back to client
         fs.writeFile('postData.json', JSON.stringify(postData), function(err){
             if(err){
