@@ -1,5 +1,8 @@
 /*This is the CSS for the left side bar for Beaver Post*/
 .links-container{
+    position:fixed;
+    left: 10px;
+    top: 158px;
     float: left;
     margin-top: 50px;
     margin-left: 2.5%;

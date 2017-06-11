@@ -20,7 +20,9 @@ a {
 }
 
 .box {
-  position: relative;
+  /*position: relative;*/
+  position: fixed;
+  top: 0px;
   margin-left: 5%;
   width: 90%;
   height: 160px;

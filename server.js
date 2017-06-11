@@ -78,7 +78,7 @@ app.post('/vote', function(req, res, next){
 //for all pages not specified, give them the 404 page
 app.get('*', function(req, res){
     res.status(404);
-    // res.render('404Page');
+    res.render('404Page');
 });
 
 app.listen(port, function(){console.log("/******* listening on port", port, "*******/")})

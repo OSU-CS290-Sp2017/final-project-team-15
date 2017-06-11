@@ -1,5 +1,9 @@
 /* This is the css for the announcements!*/
 .announcement-container{
+    position:fixed;
+    right: 10px;
+    top: 158px;
+    /*bottom: 200px;*/
     float: right;
     margin-top: 50px;
     margin-right: 2.5%;
@@ -7,6 +11,7 @@
     background-color: white;
     width: 20%;
     border-radius: 10px;
+    z-index: 1;
 }
 .announcement-title{
     font-family: 'Raleway', sans-serif;
