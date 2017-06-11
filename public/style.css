@@ -62,7 +62,10 @@
   background-color: white;
   border-radius: 10px;
   min-height: 90px;
-  position: absolute;
+  /*position: absolute;*/
+  position: relative;
+  top: 130px;
+  right: 0px;
 }
 
 .new-post-content{
@@ -155,9 +158,12 @@
 }
 
 .post-container {
-  display: inline-block;
+  position: relative;
+  right: -350px;
+  top: 170px;
+  /*display: inline-block;
   margin-left: 2.5%;
-  margin-top: 50px;
+  margin-top: 50px;*/
   width: 50%;
 }
 
