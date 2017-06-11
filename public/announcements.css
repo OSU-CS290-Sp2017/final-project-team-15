@@ -12,7 +12,8 @@
     width: 20%;
     border-radius: 10px;
     z-index: 1;
-    overflow: scroll;
+    height: 257px;
+    overflow-y: scroll;
 }
 .announcement-title{
     font-family: 'Raleway', sans-serif;

@@ -11,7 +11,7 @@
     background-color: white;
     width: 20%;
     border-radius: 10px;
-    overflow: scroll;
+    overflow-y: scroll;
 }
 
 .links-title{
