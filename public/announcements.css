@@ -2,8 +2,8 @@
 .announcement-container{
     position:fixed;
     right: 10px;
-    top: 158px;
-    /*bottom: 200px;*/
+    top: 20%;
+    bottom: 11%;
     float: right;
     margin-top: 50px;
     margin-right: 2.5%;
@@ -12,6 +12,7 @@
     width: 20%;
     border-radius: 10px;
     z-index: 1;
+    overflow: scroll;
 }
 .announcement-title{
     font-family: 'Raleway', sans-serif;

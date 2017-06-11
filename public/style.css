@@ -61,7 +61,7 @@
   min-height: 90px;
 
   position: relative;
-  right: -350px;
+  right: -25%;
   top: 130px;
   width: 50%;
 
@@ -158,9 +158,11 @@
 
 .post-container {
   position: relative;
-  right: -350px;
+  /*right: -350px;*/
+  right: -25%;
   top: 160px;
   width: 50%;
+
 }
 
 .post{
